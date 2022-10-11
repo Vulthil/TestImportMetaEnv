@@ -1,0 +1,1096 @@
+yarn run v1.22.19
+$ run-p type-check build-only
+$ vue-tsc --noEmit -p tsconfig.vitest.json --composite false
+$ vite build
+factory:: { example: '.env.example.public', env: '.env' } { framework: 'vite' }
+apply::
+config:: {
+  plugins: [
+    {
+      name: 'vite:vue',
+      handleHotUpdate: [Function: handleHotUpdate],
+      config: [Function: config],
+      configResolved: [Function: configResolved],
+      configureServer: [Function: configureServer],
+      buildStart: [Function: buildStart],
+      resolveId: [AsyncFunction: resolveId],
+      load: [Function: load],
+      transform: [Function: transform]
+    },
+    {
+      name: 'vite:vue-jsx',
+      config: [Function: config],
+      configResolved: [Function: configResolved],
+      resolveId: [Function: resolveId],
+      load: [Function: load],
+      transform: [AsyncFunction: transform]
+    },
+    [ [Object], [Object], [Object] ],
+    {
+      name: 'import-meta-env',
+      enforce: 'pre',
+      vite: [Object],
+      rollup: [Object],
+      webpack: [Function: webpack],
+      buildStart: [Function: buildStart],
+      resolveId: [Function: resolveId],
+      load: [Function: load],
+      transformInclude: [Function: transformInclude],
+      transform: [Function (anonymous)],
+      buildEnd: [Function: buildEnd],
+      apply: [Function: apply],
+      config: [Function: config],
+      configResolved: [Function: configResolved],
+      transformIndexHtml: [Function: transformIndexHtml]
+    }
+  ],
+  resolve: { alias: { '@': 'C:\\TestImportMetaEnv\\src' } },
+  optimizeDeps: { force: undefined },
+  build: {}
+}
+configResolved::
+[36mvite v3.1.7 [32mbuilding for production...[36m[39m
+buildStart::
+env:: {}
+resolveId:: C:\TestImportMetaEnv\index.html undefined
+load:: C:/TestImportMetaEnv/index.html
+loadProd:: C:/TestImportMetaEnv/index.html
+transformIncludes:: C:/TestImportMetaEnv/index.html
+transformProd:: C:/TestImportMetaEnv/index.html
+=== code before ===
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
+==================
+=== code after ===
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
+==================
+transforming...
+resolveId:: vite/modulepreload-polyfill C:/TestImportMetaEnv/index.html
+resolveId:: /src/main.ts C:/TestImportMetaEnv/index.html
+load:: vite/modulepreload-polyfill
+loadProd:: vite/modulepreload-polyfill
+load:: C:/TestImportMetaEnv/src/main.ts
+loadProd:: C:/TestImportMetaEnv/src/main.ts
+transformIncludes:: vite/modulepreload-polyfill
+transformIncludes:: C:/TestImportMetaEnv/src/main.ts
+transformProd:: C:/TestImportMetaEnv/src/main.ts
+=== code before ===
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import { Quasar, Notify } from "quasar";
+
+import App from "./App.vue";
+import router from "./router";
+
+import "@quasar/extras/material-icons/material-icons.css";
+import "quasar/src/css/index.sass";
+// Import css animate files
+import "@quasar/extras/animate/fadeInRight.css";
+import "@quasar/extras/animate/fadeOutRight.css";
+
+// Import icon libraries
+import "@quasar/extras/roboto-font-latin-ext/roboto-font-latin-ext.css";
+import "@quasar/extras/material-icons/material-icons.css";
+import "@quasar/extras/material-symbols-outlined/material-symbols-outlined.css";
+
+import "./assets/main.css";
+
+import i18next from "i18next";
+import i18nextVue from "i18next-vue";
+i18next.init({
+  lng: "en", // if you're using a language detector, do not define the lng option
+  debug: true,
+  fallbackLng: "en",
+  resources: {
+    en: {
+      translation: { test: "test1" },
+    },
+    da: {
+      translation: { test: "test2" },
+    },
+  },
+});
+const app = createApp(App);
+
+app.use(i18nextVue, {
+  i18next,
+  rerenderOn: ["initialized", "languageChanged", "loaded"],
+});
+
+app.use(createPinia());
+app.use(router);
+
+app.use(Quasar, {
+  plugins: { Notify }, // import Quasar plugins and add here
+});
+
+app.mount("#app");
+
+==================
+=== code after ===
+import import_meta_env_unique_id_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx from 'import-meta-env';
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import { Quasar, Notify } from "quasar";
+
+import App from "./App.vue";
+import router from "./router";
+
+import "@quasar/extras/material-icons/material-icons.css";
+import "quasar/src/css/index.sass";
+// Import css animate files
+import "@quasar/extras/animate/fadeInRight.css";
+import "@quasar/extras/animate/fadeOutRight.css";
+
+// Import icon libraries
+import "@quasar/extras/roboto-font-latin-ext/roboto-font-latin-ext.css";
+import "@quasar/extras/material-icons/material-icons.css";
+import "@quasar/extras/material-symbols-outlined/material-symbols-outlined.css";
+
+import "./assets/main.css";
+
+import i18next from "i18next";
+import i18nextVue from "i18next-vue";
+i18next.init({
+  lng: "en", // if you're using a language detector, do not define the lng option
+  debug: true,
+  fallbackLng: "en",
+  resources: {
+    en: {
+      translation: { test: "test1" },
+    },
+    da: {
+      translation: { test: "test2" },
+    },
+  },
+});
+const app = createApp(App);
+
+app.use(i18nextVue, {
+  i18next,
+  rerenderOn: ["initialized", "languageChanged", "loaded"],
+});
+
+app.use(createPinia());
+app.use(router);
+
+app.use(Quasar, {
+  plugins: { Notify }, // import Quasar plugins and add here
+});
+
+app.mount("#app");
+
+==================
+resolveId:: import-meta-env C:/TestImportMetaEnv/src/main.ts
+resolveId:: vue C:/TestImportMetaEnv/src/main.ts
+resolveId:: pinia C:/TestImportMetaEnv/src/main.ts
+resolveId:: quasar/src/vue-plugin.js C:/TestImportMetaEnv/src/main.ts
+resolveId:: quasar/src/plugins/Notify.js C:/TestImportMetaEnv/src/main.ts
+resolveId:: ./App.vue C:/TestImportMetaEnv/src/main.ts
+resolveId:: ./router C:/TestImportMetaEnv/src/main.ts
+resolveId:: @quasar/extras/material-icons/material-icons.css C:/TestImportMetaEnv/src/main.ts
+resolveId:: quasar/src/css/index.sass C:/TestImportMetaEnv/src/main.ts
+resolveId:: @quasar/extras/animate/fadeInRight.css C:/TestImportMetaEnv/src/main.ts
+resolveId:: @quasar/extras/animate/fadeOutRight.css C:/TestImportMetaEnv/src/main.ts
+resolveId:: @quasar/extras/roboto-font-latin-ext/roboto-font-latin-ext.css C:/TestImportMetaEnv/src/main.ts
+resolveId:: @quasar/extras/material-symbols-outlined/material-symbols-outlined.css C:/TestImportMetaEnv/src/main.ts
+resolveId:: ./assets/main.css C:/TestImportMetaEnv/src/main.ts
+resolveId:: i18next C:/TestImportMetaEnv/src/main.ts
+resolveId:: i18next-vue C:/TestImportMetaEnv/src/main.ts
+load:: C:/TestImportMetaEnv/node_modules/vue/dist/vue.runtime.esm-bundler.js
+loadProd:: C:/TestImportMetaEnv/node_modules/vue/dist/vue.runtime.esm-bundler.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/vue-plugin.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/vue-plugin.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+load:: C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+loadProd:: C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+load:: C:/TestImportMetaEnv/node_modules/i18next-vue/dist/index.js
+loadProd:: C:/TestImportMetaEnv/node_modules/i18next-vue/dist/index.js
+load:: import-meta-env
+loadProd:: import-meta-env
+load:: C:/TestImportMetaEnv/node_modules/pinia/dist/pinia.mjs
+loadProd:: C:/TestImportMetaEnv/node_modules/pinia/dist/pinia.mjs
+load:: C:/TestImportMetaEnv/src/App.vue
+loadProd:: C:/TestImportMetaEnv/src/App.vue
+load:: C:/TestImportMetaEnv/src/router/index.ts
+loadProd:: C:/TestImportMetaEnv/src/router/index.ts
+load:: C:/TestImportMetaEnv/node_modules/@quasar/extras/material-icons/material-icons.css
+loadProd:: C:/TestImportMetaEnv/node_modules/@quasar/extras/material-icons/material-icons.css
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/css/index.sass
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/css/index.sass
+load:: C:/TestImportMetaEnv/node_modules/@quasar/extras/animate/fadeInRight.css
+loadProd:: C:/TestImportMetaEnv/node_modules/@quasar/extras/animate/fadeInRight.css
+load:: C:/TestImportMetaEnv/node_modules/@quasar/extras/animate/fadeOutRight.css
+loadProd:: C:/TestImportMetaEnv/node_modules/@quasar/extras/animate/fadeOutRight.css
+load:: C:/TestImportMetaEnv/node_modules/@quasar/extras/roboto-font-latin-ext/roboto-font-latin-ext.css
+loadProd:: C:/TestImportMetaEnv/node_modules/@quasar/extras/roboto-font-latin-ext/roboto-font-latin-ext.css
+load:: C:/TestImportMetaEnv/node_modules/@quasar/extras/material-symbols-outlined/material-symbols-outlined.css
+loadProd:: C:/TestImportMetaEnv/node_modules/@quasar/extras/material-symbols-outlined/material-symbols-outlined.css
+load:: C:/TestImportMetaEnv/src/assets/main.css
+loadProd:: C:/TestImportMetaEnv/src/assets/main.css
+transformIncludes:: import-meta-env
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/vue-plugin.js
+resolveId:: ./install-quasar.js C:/TestImportMetaEnv/node_modules/quasar/src/vue-plugin.js
+resolveId:: ./lang.js C:/TestImportMetaEnv/node_modules/quasar/src/vue-plugin.js
+resolveId:: ./icon-set.js C:/TestImportMetaEnv/node_modules/quasar/src/vue-plugin.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/lang.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/lang.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/icon-set.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/icon-set.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/vue/dist/vue.runtime.esm-bundler.js
+resolveId:: @vue/runtime-dom C:/TestImportMetaEnv/node_modules/vue/dist/vue.runtime.esm-bundler.js
+load:: C:/TestImportMetaEnv/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+resolveId:: ../components/avatar/QAvatar.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+resolveId:: ../components/icon/QIcon.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+resolveId:: ../components/btn/QBtn.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+resolveId:: ../components/spinner/QSpinner.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+resolveId:: ../utils/private/create.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+resolveId:: ../utils/event.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+resolveId:: ../utils/private/global-nodes.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+resolveId:: ../install-quasar.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+resolveId:: ../utils/is.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Notify.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/components/avatar/QAvatar.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/components/avatar/QAvatar.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/components/icon/QIcon.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/components/icon/QIcon.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/QSpinner.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/QSpinner.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/create.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/create.js
+transformIncludes:: C:/TestImportMetaEnv/src/router/index.ts
+transformProd:: C:/TestImportMetaEnv/src/router/index.ts
+=== code before ===
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: HomeView,
+    },
+    {
+      path: "/about",
+      name: "about",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/AboutView.vue"),
+    },
+  ],
+});
+
+export default router;
+
+==================
+=== code after ===
+import import_meta_env_unique_id_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx from 'import-meta-env';
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: HomeView,
+    },
+    {
+      path: "/about",
+      name: "about",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/AboutView.vue"),
+    },
+  ],
+});
+
+export default router;
+
+==================
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/event.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/event.js
+transformIncludes:: C:/TestImportMetaEnv/src/App.vue
+transformProd:: C:/TestImportMetaEnv/src/App.vue
+=== code before ===
+<template>
+  <header>
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
+    </div>
+  </header>
+
+  <TheSidebar v-if="!$route.meta.hideNavbar">
+    <RouterView />
+  </TheSidebar>
+  <RouterView v-else />
+</template>
+
+<script setup lang="ts">
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
+import TheSidebar from "./components/TheSidebar.vue";
+import { useQuasar } from "quasar";
+
+const $q = useQuasar();
+</script>
+
+<style lang="scss" scoped>
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+}
+</style>
+
+==================
+=== code after ===
+<template>
+  <header>
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
+    </div>
+  </header>
+
+  <TheSidebar v-if="!$route.meta.hideNavbar">
+    <RouterView />
+  </TheSidebar>
+  <RouterView v-else />
+</template>
+
+<script setup lang="ts">
+import import_meta_env_unique_id_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx from 'import-meta-env';
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
+import TheSidebar from "./components/TheSidebar.vue";
+import { useQuasar } from "quasar";
+
+const $q = useQuasar();
+</script>
+
+<style lang="scss" scoped>
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+}
+</style>
+
+==================
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/global-nodes.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/global-nodes.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/@quasar/extras/material-icons/material-icons.css
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/is.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/is.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/@quasar/extras/animate/fadeInRight.css
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/css/index.sass
+transformIncludes:: C:/TestImportMetaEnv/node_modules/@quasar/extras/animate/fadeOutRight.css
+transformIncludes:: C:/TestImportMetaEnv/node_modules/i18next-vue/dist/index.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/i18next-vue/dist/index.js
+load::  commonjsHelpers.js
+loadProd::  commonjsHelpers.js
+load::  C:/TestImportMetaEnv/node_modules/i18next-vue/dist/index.js?commonjs-exports
+loadProd::  C:/TestImportMetaEnv/node_modules/i18next-vue/dist/index.js?commonjs-exports
+load::  C:/TestImportMetaEnv/node_modules/vue/dist/vue.runtime.esm-bundler.js?commonjs-proxy
+loadProd::  C:/TestImportMetaEnv/node_modules/vue/dist/vue.runtime.esm-bundler.js?commonjs-proxy
+transformIncludes::  commonjsHelpers.js
+transformProd::  commonjsHelpers.js
+=== code before ===
+
+export var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+export function getDefaultExportFromCjs (x) {
+	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+}
+
+export function getDefaultExportFromNamespaceIfPresent (n) {
+	return n && Object.prototype.hasOwnProperty.call(n, 'default') ? n['default'] : n;
+}
+
+export function getDefaultExportFromNamespaceIfNotNamed (n) {
+	return n && Object.prototype.hasOwnProperty.call(n, 'default') && Object.keys(n).length === 1 ? n['default'] : n;
+}
+
+export function getAugmentedNamespace(n) {
+  var f = n.default;
+	if (typeof f == "function") {
+		var a = function () {
+			return f.apply(this, arguments);
+		};
+		a.prototype = f.prototype;
+  } else a = {};
+  Object.defineProperty(a, '__esModule', {value: true});
+	Object.keys(n).forEach(function (k) {
+		var d = Object.getOwnPropertyDescriptor(n, k);
+		Object.defineProperty(a, k, d.get ? d : {
+			enumerable: true,
+			get: function () {
+				return n[k];
+			}
+		});
+	});
+	return a;
+}
+
+==================
+=== code after ===
+import import_meta_env_unique_id_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx from 'import-meta-env';
+
+export var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+export function getDefaultExportFromCjs (x) {
+	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+}
+
+export function getDefaultExportFromNamespaceIfPresent (n) {
+	return n && Object.prototype.hasOwnProperty.call(n, 'default') ? n['default'] : n;
+}
+
+export function getDefaultExportFromNamespaceIfNotNamed (n) {
+	return n && Object.prototype.hasOwnProperty.call(n, 'default') && Object.keys(n).length === 1 ? n['default'] : n;
+}
+
+export function getAugmentedNamespace(n) {
+  var f = n.default;
+	if (typeof f == "function") {
+		var a = function () {
+			return f.apply(this, arguments);
+		};
+		a.prototype = f.prototype;
+  } else a = {};
+  Object.defineProperty(a, '__esModule', {value: true});
+	Object.keys(n).forEach(function (k) {
+		var d = Object.getOwnPropertyDescriptor(n, k);
+		Object.defineProperty(a, k, d.get ? d : {
+			enumerable: true,
+			get: function () {
+				return n[k];
+			}
+		});
+	});
+	return a;
+}
+
+==================
+transformIncludes::  C:/TestImportMetaEnv/node_modules/i18next-vue/dist/index.js?commonjs-exports
+transformIncludes::  C:/TestImportMetaEnv/node_modules/vue/dist/vue.runtime.esm-bundler.js?commonjs-proxy
+resolveId:: import-meta-env  commonjsHelpers.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/@quasar/extras/roboto-font-latin-ext/roboto-font-latin-ext.css
+transformIncludes:: C:/TestImportMetaEnv/node_modules/@quasar/extras/material-symbols-outlined/material-symbols-outlined.css
+resolveId:: import-meta-env C:/TestImportMetaEnv/src/router/index.ts
+resolveId:: vue-router C:/TestImportMetaEnv/src/router/index.ts
+resolveId:: ../views/HomeView.vue C:/TestImportMetaEnv/src/router/index.ts
+resolveId:: ../views/AboutView.vue C:/TestImportMetaEnv/src/router/index.ts
+resolveId::  vite/preload-helper C:/TestImportMetaEnv/src/router/index.ts
+load:: C:/TestImportMetaEnv/node_modules/vue-router/dist/vue-router.mjs
+loadProd:: C:/TestImportMetaEnv/node_modules/vue-router/dist/vue-router.mjs
+load:: C:/TestImportMetaEnv/src/views/HomeView.vue
+loadProd:: C:/TestImportMetaEnv/src/views/HomeView.vue
+load:: C:/TestImportMetaEnv/src/views/AboutView.vue
+loadProd:: C:/TestImportMetaEnv/src/views/AboutView.vue
+load::  vite/preload-helper
+loadProd::  vite/preload-helper
+transformIncludes::  vite/preload-helper
+transformIncludes:: C:/TestImportMetaEnv/src/assets/main.css
+transformIncludes:: C:/TestImportMetaEnv/node_modules/pinia/dist/pinia.mjs
+resolveId:: vue-demi C:/TestImportMetaEnv/node_modules/pinia/dist/pinia.mjs
+resolveId:: @vue/devtools-api C:/TestImportMetaEnv/node_modules/pinia/dist/pinia.mjs
+load:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/index.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/index.js
+load:: C:/TestImportMetaEnv/node_modules/vue-demi/lib/index.mjs
+loadProd:: C:/TestImportMetaEnv/node_modules/vue-demi/lib/index.mjs
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/lang.js
+resolveId:: ./utils/private/define-reactive-plugin.js C:/TestImportMetaEnv/node_modules/quasar/src/lang.js
+resolveId:: ../lang/en-US C:/TestImportMetaEnv/node_modules/quasar/src/lang.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/define-reactive-plugin.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/define-reactive-plugin.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/lang/en-US.mjs
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/lang/en-US.mjs
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/icon-set.js
+resolveId:: ./utils/private/define-reactive-plugin.js C:/TestImportMetaEnv/node_modules/quasar/src/icon-set.js
+resolveId:: ./utils/private/inject-obj-prop.js C:/TestImportMetaEnv/node_modules/quasar/src/icon-set.js
+resolveId:: ../icon-set/material-icons C:/TestImportMetaEnv/node_modules/quasar/src/icon-set.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/inject-obj-prop.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/inject-obj-prop.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/icon-set/material-icons.mjs
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/icon-set/material-icons.mjs
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: ./plugins/Platform.js C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: ./plugins/Screen.js C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: ./plugins/Dark.js C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: ./history.js C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: ./lang.js C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: ./body.js C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: ./icon-set.js C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: ./utils/private/symbols.js C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: ./utils/private/global-config.js C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+resolveId:: ./utils/is.js C:/TestImportMetaEnv/node_modules/quasar/src/install-quasar.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Platform.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Platform.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Screen.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Screen.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/components/avatar/QAvatar.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/components/avatar/QAvatar.js
+resolveId:: ../icon/QIcon.js C:/TestImportMetaEnv/node_modules/quasar/src/components/avatar/QAvatar.js
+resolveId:: ../../composables/private/use-size.js C:/TestImportMetaEnv/node_modules/quasar/src/components/avatar/QAvatar.js
+resolveId:: ../../utils/private/create.js C:/TestImportMetaEnv/node_modules/quasar/src/components/avatar/QAvatar.js
+resolveId:: ../../utils/private/render.js C:/TestImportMetaEnv/node_modules/quasar/src/components/avatar/QAvatar.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Dark.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Dark.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/QSpinner.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/QSpinner.js
+resolveId:: ./use-spinner.js C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/QSpinner.js
+resolveId:: ../../utils/private/create.js C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/QSpinner.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/history.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/history.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+resolveId:: @babel/runtime/helpers/esm/typeof C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+resolveId:: @babel/runtime/helpers/esm/classCallCheck C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+resolveId:: @babel/runtime/helpers/esm/createClass C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+resolveId:: @babel/runtime/helpers/esm/assertThisInitialized C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+resolveId:: @babel/runtime/helpers/esm/inherits C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+resolveId:: @babel/runtime/helpers/esm/possibleConstructorReturn C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+resolveId:: @babel/runtime/helpers/esm/getPrototypeOf C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+resolveId:: @babel/runtime/helpers/esm/defineProperty C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+resolveId:: @babel/runtime/helpers/esm/toArray C:/TestImportMetaEnv/node_modules/i18next/dist/esm/i18next.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/body.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/body.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
+resolveId:: @vue/runtime-core C:/TestImportMetaEnv/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
+resolveId:: @vue/shared C:/TestImportMetaEnv/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/symbols.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/symbols.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/components/icon/QIcon.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/components/icon/QIcon.js
+resolveId:: ../../composables/private/use-size.js C:/TestImportMetaEnv/node_modules/quasar/src/components/icon/QIcon.js
+resolveId:: ../../utils/private/create.js C:/TestImportMetaEnv/node_modules/quasar/src/components/icon/QIcon.js
+resolveId:: ../../utils/private/render.js C:/TestImportMetaEnv/node_modules/quasar/src/components/icon/QIcon.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/global-config.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/global-config.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/create.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/create.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/composables/private/use-size.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/composables/private/use-size.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+resolveId:: ../icon/QIcon.js C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+resolveId:: ../spinner/QSpinner.js C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+resolveId:: ../../directives/Ripple.js C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+resolveId:: ./use-btn.js C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+resolveId:: ../../utils/private/create.js C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+resolveId:: ../../utils/private/render.js C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+resolveId:: ../../utils/event.js C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+resolveId:: ../../utils/private/key-composition.js C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/QBtn.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/render.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/render.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/event.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/use-spinner.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/use-spinner.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/global-nodes.js
+resolveId:: ./global-config.js C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/global-nodes.js
+load:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/typeof.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/typeof.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/is.js
+resolveId:: C:/TestImportMetaEnv/src/App.vue?vue&type=script&setup=true&lang.ts C:/TestImportMetaEnv/src/App.vue
+resolveId:: C:/TestImportMetaEnv/src/App.vue?vue&type=style&index=0&scoped=9d3b2b18&lang.scss C:/TestImportMetaEnv/src/App.vue
+resolveId::  plugin-vue:export-helper C:/TestImportMetaEnv/src/App.vue
+load:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/classCallCheck.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/classCallCheck.js
+transformIncludes:: C:/TestImportMetaEnv/src/views/HomeView.vue
+transformProd:: C:/TestImportMetaEnv/src/views/HomeView.vue
+=== code before ===
+<template>
+  <main>
+    <p>BASE_URL: {{ meta.BASE_URL }}</p>
+    <p>API_URL: {{ meta.API_URL }}</p>
+    <TheWelcome />
+  </main>
+</template>
+
+<script setup lang="ts">
+import TheWelcome from "../components/TheWelcome.vue";
+
+const meta = {
+  BASE_URL: import.meta.env.BASE_URL,
+  API_URL: import.meta.env.API_URL,
+};
+</script>
+
+<style lang="scss" scoped>
+body,
+body main {
+  background-color: var(--theme-color-primary-background);
+}
+</style>
+
+==================
+=== code after ===
+<template>
+  <main>
+    <p>BASE_URL: {{ meta.BASE_URL }}</p>
+    <p>API_URL: {{ meta.API_URL }}</p>
+    <TheWelcome />
+  </main>
+</template>
+
+<script setup lang="ts">
+import import_meta_env_unique_id_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx from 'import-meta-env';
+import TheWelcome from "../components/TheWelcome.vue";
+
+const meta = {
+  BASE_URL: import.meta.env.BASE_URL,
+  API_URL: import_meta_env_unique_id_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.API_URL,
+};
+</script>
+
+<style lang="scss" scoped>
+body,
+body main {
+  background-color: var(--theme-color-primary-background);
+}
+</style>
+
+==================
+load:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/createClass.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/createClass.js
+transformIncludes:: C:/TestImportMetaEnv/src/views/AboutView.vue
+transformProd:: C:/TestImportMetaEnv/src/views/AboutView.vue
+=== code before ===
+<template>
+  <div class="about">
+    <h1>This is an about page</h1>
+  </div>
+</template>
+
+<style>
+@media (min-width: 1024px) {
+  .about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+</style>
+
+==================
+=== code after ===
+<template>
+  <div class="about">
+    <h1>This is an about page</h1>
+  </div>
+</template>
+
+<style>
+@media (min-width: 1024px) {
+  .about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+</style>
+
+==================
+resolveId:: vue C:/TestImportMetaEnv/src/views/AboutView.vue
+resolveId:: C:/TestImportMetaEnv/src/views/AboutView.vue?vue&type=style&index=0&lang.css C:/TestImportMetaEnv/src/views/AboutView.vue
+resolveId::  plugin-vue:export-helper C:/TestImportMetaEnv/src/views/AboutView.vue
+load:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/vue-demi/lib/index.mjs
+resolveId:: vue C:/TestImportMetaEnv/node_modules/vue-demi/lib/index.mjs
+load:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/inherits.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/inherits.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/index.js
+resolveId:: ./env.js C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/index.js
+resolveId:: ./const.js C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/index.js
+resolveId:: ./proxy.js C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/index.js
+resolveId:: ./api/index.js C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/index.js
+resolveId:: ./plugin.js C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/index.js
+resolveId:: ./time.js C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/index.js
+load:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/define-reactive-plugin.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/define-reactive-plugin.js
+resolveId:: ./inject-obj-prop C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/define-reactive-plugin.js
+load:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/vue-router/dist/vue-router.mjs
+resolveId:: vue C:/TestImportMetaEnv/node_modules/vue-router/dist/vue-router.mjs
+resolveId:: @vue/devtools-api C:/TestImportMetaEnv/node_modules/vue-router/dist/vue-router.mjs
+load:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/defineProperty.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/defineProperty.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/lang/en-US.mjs
+load:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/toArray.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@babel/runtime/helpers/esm/toArray.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Screen.js
+resolveId:: ./Platform.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Screen.js
+resolveId:: ../utils/private/define-reactive-plugin.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Screen.js
+resolveId:: ../utils/event.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Screen.js
+resolveId:: ../utils/debounce.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Screen.js
+load:: C:/TestImportMetaEnv/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/body.js
+resolveId:: ./utils/set-css-var.js C:/TestImportMetaEnv/node_modules/quasar/src/body.js
+resolveId:: ./utils/event.js C:/TestImportMetaEnv/node_modules/quasar/src/body.js
+resolveId:: ./utils/private/key-composition.js C:/TestImportMetaEnv/node_modules/quasar/src/body.js
+resolveId:: ./plugins/Platform.js C:/TestImportMetaEnv/node_modules/quasar/src/body.js
+load:: C:/TestImportMetaEnv/node_modules/@vue/shared/dist/shared.esm-bundler.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@vue/shared/dist/shared.esm-bundler.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/history.js
+resolveId:: ./plugins/Platform.js C:/TestImportMetaEnv/node_modules/quasar/src/history.js
+resolveId:: ./utils/event.js C:/TestImportMetaEnv/node_modules/quasar/src/history.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/directives/Ripple.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/directives/Ripple.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Dark.js
+resolveId:: ../utils/private/define-reactive-plugin.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Dark.js
+resolveId:: ./Platform.js C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Dark.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/use-btn.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/components/btn/use-btn.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/inject-obj-prop.js
+load:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/key-composition.js
+loadProd:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/key-composition.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/composables/private/use-size.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/composables/private/use-size.js
+load::  plugin-vue:export-helper
+loadProd::  plugin-vue:export-helper
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/render.js
+load:: C:/TestImportMetaEnv/src/App.vue?vue&type=script&setup=true&lang.ts
+loadProd:: C:/TestImportMetaEnv/src/App.vue?vue&type=script&setup=true&lang.ts
+transformIncludes::  plugin-vue:export-helper
+load:: C:/TestImportMetaEnv/src/App.vue?vue&type=style&index=0&scoped=9d3b2b18&lang.scss
+loadProd:: C:/TestImportMetaEnv/src/App.vue?vue&type=style&index=0&scoped=9d3b2b18&lang.scss
+transformIncludes:: C:/TestImportMetaEnv/src/App.vue?vue&type=script&setup=true&lang.ts
+transformProd:: C:/TestImportMetaEnv/src/App.vue?vue&type=script&setup=true&lang.ts
+=== code before ===
+import { defineComponent as _defineComponent } from 'vue'
+import { createElementVNode as _createElementVNode, createVNode as _createVNode, createTextVNode as _createTextVNode, unref as _unref, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, Fragment as _Fragment, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from "vue"
+import _imports_0 from '@/assets/logo.svg'
+
+
+const _withScopeId = n => (_pushScopeId("data-v-9d3b2b18"),n=n(),_popScopeId(),n)
+const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode("img", {
+  alt: "Vue logo",
+  class: "logo",
+  src: _imports_0,
+  width: "125",
+  height: "125"
+}, null, -1))
+const _hoisted_2 = { class: "wrapper" }
+
+import import_meta_env_unique_id_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx from 'import-meta-env';
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
+import TheSidebar from "./components/TheSidebar.vue";
+import { useQuasar } from "quasar";
+
+
+export default /*#__PURE__*/_defineComponent({
+  __name: 'App',
+  setup(__props) {
+
+const $q = useQuasar();
+
+return (_ctx: any,_cache: any) => {
+  return (_openBlock(), _createElementBlock(_Fragment, null, [
+    _createElementVNode("header", null, [
+      _hoisted_1,
+      _createElementVNode("div", _hoisted_2, [
+        _createVNode(HelloWorld, { msg: "You did it!" }),
+        _createElementVNode("nav", null, [
+          _createVNode(_unref(RouterLink), { to: "/" }, {
+            default: _withCtx(() => [
+              _createTextVNode("Home")
+            ]),
+            _: 1
+          }),
+          _createVNode(_unref(RouterLink), { to: "/about" }, {
+            default: _withCtx(() => [
+              _createTextVNode("About")
+            ]),
+            _: 1
+          })
+        ])
+      ])
+    ]),
+    (!_ctx.$route.meta.hideNavbar)
+      ? (_openBlock(), _createBlock(TheSidebar, { key: 0 }, {
+          default: _withCtx(() => [
+            _createVNode(_unref(RouterView))
+          ]),
+          _: 1
+        }))
+      : (_openBlock(), _createBlock(_unref(RouterView), { key: 1 }))
+  ], 64))
+}
+}
+
+})
+==================
+=== code after ===
+import import_meta_env_unique_id_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx from 'import-meta-env';
+import { defineComponent as _defineComponent } from 'vue'
+import { createElementVNode as _createElementVNode, createVNode as _createVNode, createTextVNode as _createTextVNode, unref as _unref, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, Fragment as _Fragment, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from "vue"
+import _imports_0 from '@/assets/logo.svg'
+
+
+const _withScopeId = n => (_pushScopeId("data-v-9d3b2b18"),n=n(),_popScopeId(),n)
+const _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode("img", {
+  alt: "Vue logo",
+  class: "logo",
+  src: _imports_0,
+  width: "125",
+  height: "125"
+}, null, -1))
+const _hoisted_2 = { class: "wrapper" }
+
+import import_meta_env_unique_id_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx from 'import-meta-env';
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
+import TheSidebar from "./components/TheSidebar.vue";
+import { useQuasar } from "quasar";
+
+
+export default /*#__PURE__*/_defineComponent({
+  __name: 'App',
+  setup(__props) {
+
+const $q = useQuasar();
+
+return (_ctx: any,_cache: any) => {
+  return (_openBlock(), _createElementBlock(_Fragment, null, [
+    _createElementVNode("header", null, [
+      _hoisted_1,
+      _createElementVNode("div", _hoisted_2, [
+        _createVNode(HelloWorld, { msg: "You did it!" }),
+        _createElementVNode("nav", null, [
+          _createVNode(_unref(RouterLink), { to: "/" }, {
+            default: _withCtx(() => [
+              _createTextVNode("Home")
+            ]),
+            _: 1
+          }),
+          _createVNode(_unref(RouterLink), { to: "/about" }, {
+            default: _withCtx(() => [
+              _createTextVNode("About")
+            ]),
+            _: 1
+          })
+        ])
+      ])
+    ]),
+    (!_ctx.$route.meta.hideNavbar)
+      ? (_openBlock(), _createBlock(TheSidebar, { key: 0 }, {
+          default: _withCtx(() => [
+            _createVNode(_unref(RouterView))
+          ]),
+          _: 1
+        }))
+      : (_openBlock(), _createBlock(_unref(RouterView), { key: 1 }))
+  ], 64))
+}
+}
+
+})
+==================
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/render.js
+load:: C:/TestImportMetaEnv/src/views/AboutView.vue?vue&type=style&index=0&lang.css
+loadProd:: C:/TestImportMetaEnv/src/views/AboutView.vue?vue&type=style&index=0&lang.css
+transformIncludes:: C:/TestImportMetaEnv/src/App.vue?vue&type=style&index=0&scoped=9d3b2b18&lang.scss
+load:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/env.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/env.js
+transformIncludes:: C:/TestImportMetaEnv/src/views/AboutView.vue?vue&type=style&index=0&lang.css
+load:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/const.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/const.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/symbols.js
+load:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/proxy.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/proxy.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/icon-set/material-icons.mjs
+load:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/api/index.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/api/index.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/utils/private/global-config.js
+load:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/plugin.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/plugin.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/use-spinner.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/use-spinner.js
+resolveId:: ../../composables/private/use-size.js C:/TestImportMetaEnv/node_modules/quasar/src/components/spinner/use-spinner.js
+load:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/time.js
+loadProd:: C:/TestImportMetaEnv/node_modules/@vue/devtools-api/lib/esm/time.js
+transformIncludes:: C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Platform.js
+resolveId:: vue C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Platform.js
+resolveId:: ../utils/private/inject-obj-prop C:/TestImportMetaEnv/node_modules/quasar/src/plugins/Platform.js
+resolveId:: C:/TestImportMetaEnv/src/views/HomeView.vue?vue&type=script&setup=true&lang.ts C:/TestImportMetaEnv/src/views/HomeView.vue
+resolveId:: C:/TestImportMetaEnv/src/views/HomeView.vue?vue&type=style&index=0&scoped=22bf272d&lang.scss C:/TestImportMetaEnv/src/views/HomeView.vue
+resolveId::  plugin-vue:export-helper C:/TestImportMetaEnv/src/views/HomeView.vue
+buildEnd::
+
+[36mimport-meta-env v0.1.9[39m
+[32m✓[39m environment files are generated.
+[33mRemember to inject (`npx import-meta-env`) environment variables before serving your application.[39m
+
+[32m✓[39m 49 modules transformed.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
