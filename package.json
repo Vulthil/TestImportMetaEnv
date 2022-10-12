@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@import-meta-env/cli": "^0.1.8",
-    "@import-meta-env/unplugin": "^0.1.9",
+    "@import-meta-env/unplugin": "^0.1.10",
     "@quasar/vite-plugin": "^1.2.3",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/jsdom": "^20.0.0",

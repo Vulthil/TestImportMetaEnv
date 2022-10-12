@@ -335,10 +335,10 @@
     picocolors "^1.0.0"
     serialize-javascript "^6.0.0"
 
-"@import-meta-env/unplugin@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@import-meta-env/unplugin/-/unplugin-0.1.9.tgz#478ad80404e5ae486af550cc4680936e6a3a675e"
-  integrity sha512-Bq8qzP9XiUdrHEbiYnMxISK3emrzsfPl1gzmAWtlX0pj9/alUGhfAjIvJrF714pZ4FP7wDbKtoqOL9dV7jtAlA==
+"@import-meta-env/unplugin@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@import-meta-env/unplugin/-/unplugin-0.1.10.tgz#e3b40f32aba7786618ddbcba34739b3665d409b8"
+  integrity sha512-dabrSsFNEH6Q9hRIz9RJNp1jC8Bb5pab88xQjDTNZc4hcR49zPO9HLAh0KpA3GMSEY3/ruBlqB4DSxR2UGHVEw==
   dependencies:
     object-hash "^3.0.0"
     picocolors "^1.0.0"
